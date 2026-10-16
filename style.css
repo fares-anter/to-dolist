@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root{
+--gray:#333 ;
+--green:#4bae4f;
+--light-gray:#edeef0;
+}
+body,html{
+    min-height: 100vh;
+    background-color: var(--gray);
+    overflow: auto;
+
+}
+#to-dolist{
+    background-color: #fff;
+    width: 540px;
+    margin: 100px auto  20px;
+    padding: 50px 30px 70px;
+    border-radius: 10px;
+}
+#to-dolist #title img{
+    width: 30px;
+}
+#to-dolist #title{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+
+#to-dolist #row {
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-bottom: 30px;
+gap: 9px;
+}
+#to-dolist #row #input-task{
+    color:#000;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    padding:15px;
+    width: 80%;
+    border-radius: 8px;
+    background-color: var(--light-gray);
+}
+#to-dolist #row .btn{
+   background-color: var(--green);
+   color: #fff;
+   font-size: 18px;
+   font-weight: 600;
+   padding: 2px;
+   border-radius: 8px;
+}
+               /* ---- */
+#to-dolist #task-list li{
+    list-style: none;
+    padding: 12px 8px 12px 50px;
+    position: relative;
+    margin-bottom: 10px;
+}
+#to-dolist #task-list li span{
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: center;
+    font-size: 25px;
+    transition: all 0.8s ease;
+}
+#to-dolist #task-list li span:hover{
+    color: red;
+}
+#to-dolist ul li::before{
+    content: "";
+    position: absolute;
+    background: url("circle.png") center/cover;
+    height: 28px;
+    left: 8px;
+    width: 28px;
+}
+#to-dolist ul li.checked::before{
+    background: url("checked.png") center /cover;
+
+    
+}
+#to-dolist ul li.checked{
+    text-decoration: line-through;
+}
